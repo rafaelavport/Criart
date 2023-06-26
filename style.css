@@ -1,0 +1,38 @@
+body{
+    background-color: #043247;
+}
+.tela_login_1{
+    text-align: center;
+    color: white;
+    margin: 5vh;
+}
+.tela_login_1 button{
+    color: white;
+    width: 15vw;
+    height: 10vh;
+}
+.tela_login_1 h2{
+    margin: 28vh;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid rgb(255, 255, 255);
+    animation: typewriter 3s steps(42),
+        blink 0.4s steps(42) infinite;
+}
+@keyframes typewriter {
+    from {
+      width: 0ch;
+    }
+    to {
+      width: 42ch;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: rgb(255, 255, 255);
+    }
+    to {
+      border-color: transparent;
+    }
+  }
