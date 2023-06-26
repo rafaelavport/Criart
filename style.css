@@ -2,23 +2,31 @@ body{
     background-color: #043247;
 }
 .tela_login_1{
-    text-align: center;
     color: white;
     margin: 5vh;
 }
+.tela_login_1 img{
+    margin: 4vh;
+}
 .tela_login_1 button{
     color: white;
-    width: 15vw;
-    height: 10vh;
+    width: 20vw;
+    height: 15vh;
+    margin-top: 15vh;
+    margin-left: 70vw;
 }
 .tela_login_1 h2{
-    margin: 28vh;
+    margin: 20vh 0vw 3vh 12vw;
     font-family: monospace;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 5px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
     animation: typewriter 3s steps(42),
         blink 0.4s steps(42) infinite;
+}
+.tela_login_1 h4{
+    margin-left: 25vh;
+    font-family: monospace;
 }
 @keyframes typewriter {
     from {
