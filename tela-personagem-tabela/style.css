@@ -1,0 +1,14 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+.contador{
+    display: flex;
+}
+.contador button{
+    width: 2vw;
+    height: 4vh;
+    margin: 2vh;
+}
+h2{
+    margin: 2vh;
+}

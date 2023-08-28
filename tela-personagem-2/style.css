@@ -1,0 +1,35 @@
+*{
+    background-color: rgb(255, 255, 255);
+}
+.area-personagem img{
+    margin-top: 10vh;
+    margin-left: 16vw;
+    position: absolute;
+    width: 20vw;
+    height: 67vh;
+}
+.area-grande-personagens{
+    background-color: rgb(0, 0, 0);
+    float: right;
+    width: 45vw;
+    height: 98vh;
+}
+.area-selecao-personagem{
+    margin-top: 40vh;
+    margin-left: 8vw;
+    margin-right: 5vw;
+}
+.quadrado-1, .quadrado-2, .quadrado-3, .quadrado-4, .quadrado-5{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vw;
+    width: 5vw;
+    height: 10vh;
+    float: left;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    
+}
+.quadrado-1 img, .quadrado-2 img, .quadrado-3 img, .quadrado-4 img, .quadrado-5 img{
+    width: 2vw;
+    margin: 1vw;
+}
