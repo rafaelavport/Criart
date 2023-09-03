@@ -37,15 +37,15 @@ app.use((req, res, next) => {
     }
 });
 
-app.get('/', (req, res) => {
-    app.set('layout', './layouts/login');
-    res.render('login');
-});
-
-//app.get('/login', (req, res) => {
-    //app.set('layout', './layouts/default/login');
-    //usuarioController.login(req, res);
+//app.get('/', (req, res) => {
+    //app.set('layout', './layouts/login');
+    //res.render('login');
 //});
+
+app.get('/login', (req, res) => {
+    app.set('layout', './layouts/default/login');
+    usuarioController.login(req, res);
+});
 
 //const express = require('express');
 //const bodyParser = require('body-parser');
