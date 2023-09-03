@@ -1,0 +1,39 @@
+body{
+    background-color: #000000;
+}
+.tela-login1-img img{
+    width: 70vw;
+    height: 22vh;
+    padding-top: 10vh;
+    padding-left: 28vw;
+}
+.tela-login1-forms-email input{
+    width: 25vw;
+    height: 8vh;
+    border-radius: 10vh;
+    margin-top: 15vh;
+    margin-left: 35vw;
+    padding: 1vw;
+}
+.tela-login1-forms-senha input{
+    width: 25vw;
+    height: 8vh;
+    border-radius: 10vh;
+    margin-top: 5vh;
+    margin-left: 35vw;
+    padding: 1vw;
+}
+.tela-login1-forms-senha button{
+    width: 20vw;
+    height: 8vh;
+    border-radius: 10vh;
+    margin-top: 8vh;
+    margin-left: 38vw;
+}
+.tela-login1-forms-senha button:hover{
+    background-color: #252525;
+}
+.tela-login1-comando-fazer-conta{
+    margin-top: 4vh;
+    margin-left: 42vw;
+}
