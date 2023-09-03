@@ -4,6 +4,7 @@ async function connect() {
   try {
     const connection = await mysql.createConnection({
       host: 'localhost',
+      port: 3306,
       user: 'root',
       password: '',
       database: 'Criart'
@@ -19,7 +20,7 @@ async function connect() {
 async function query(sql) {
   const connection = await connect();
   try {
-    const [rows, fields] = await connection.execute(sql);
+    const [rows] = await connection.execute(sql);
     console.log('Query executada com sucesso');
     return rows;
   } catch (error) {

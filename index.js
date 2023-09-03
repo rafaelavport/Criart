@@ -8,10 +8,10 @@ const path = require('path');
 const usuarioController = require('./controllers/usuarioController');
 const personagemController = require('./controllers/personagemController');
 
-app.use(session({secret: 'abracadabra'}));
+app.use(session({secret: 'chaveSecretaDemais'}));
 
 app.use(expressLayouts);
-app.set('layout', './layouts/default/login');
+app.set('layout', 'views/layouts/default/login');
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true })); 
@@ -38,14 +38,14 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    app.set('layout', './layouts/default/main');
-    res.render('home');
+    app.set('layout', './layouts/default/login');
+    res.render('login');
 });
 
-app.get('/login', (req, res) => {
-    app.set('layout', './layouts/default/login');
-    usuarioController.login(req, res);
-});
+//app.get('/login', (req, res) => {
+    //app.set('layout', './layouts/default/login');
+    //usuarioController.login(req, res);
+//});
 
 //const express = require('express');
 //const bodyParser = require('body-parser');
