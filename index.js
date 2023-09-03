@@ -2,7 +2,6 @@ const express = require('express');
 const app = express(); 
 const port = 3000; 
 const expressLayouts = require('express-ejs-layouts');
-const session = require('express-session');
 require('dotenv').config();
 const path = require('path');
 const usuarioController = require('./controllers/usuarioController');
@@ -10,25 +9,35 @@ const personagemController = require('./controllers/personagemController');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
 const sessionStore = new MySQLStore({
-    host: 'mysql.infocimol.com.br',
-    user: 'infocimol05',
-    password: 'criart123',
+    host: 'localhost',
+    user: 'rafa',
+    password: '12345678',
     database: 'Criart'
-  });
-  
+});
+
 app.use(session({
-  secret: 'abracadabra',
-  resave: false, // Adicione esta linha
-  saveUninitialized: true,
-  store: sessionStore
+    secret: 'chavezona',
+    resave: false, 
+    saveUninitialized: true,
+    store: sessionStore
 }));
 
-app.use(session({secret: 'chaveSecretaDemais'}));
+// Define as configurações do EJS
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
+app.set('layout', './layouts/default/login'); // Isso define o layout padrão para as visualizações EJS
 
-app.get('/login', (req, res) => {
-    app.set('layout', './layouts/default/login');
+app.get('/', (req, res) => {
+    // Você não precisa definir o layout aqui, pois já está configurado nas configurações do EJS
     usuarioController.login(req, res);
 });
+
+// Resto do seu código...
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
 
 //app.use(expressLayouts);
 //app.set('layout', 'views/layouts/default/login');

@@ -1,2 +1,2 @@
 build: npm install
-start: node server.js
+start: node index.js
