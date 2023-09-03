@@ -7,6 +7,21 @@ require('dotenv').config();
 const path = require('path');
 const usuarioController = require('./controllers/usuarioController');
 const personagemController = require('./controllers/personagemController');
+const session = require('express-session');
+const MySQLStore = require('express-mysql-session')(session);
+const sessionStore = new MySQLStore({
+    host: 'mysql.infocimol.com.br',
+    user: 'infocimol05',
+    password: 'criart123',
+    database: 'Criart'
+  });
+  
+app.use(session({
+  secret: 'abracadabra',
+  resave: false, // Adicione esta linha
+  saveUninitialized: true,
+  store: sessionStore
+}));
 
 app.use(session({secret: 'chaveSecretaDemais'}));
 
