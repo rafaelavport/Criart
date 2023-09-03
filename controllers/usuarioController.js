@@ -3,20 +3,19 @@ const usuarioModel = require('../models/usuarioModel');
 function login(req, res) {
     res.locals.login = '.layouts/login.ejs'; 
     res.render('login'); 
-    
-    let erro = req.query.erro || '';
-    if (erro == 1) {
-        erro = 'Email ou senha incorretos';
-    } else if (erro == 2) {
-        erro = 'Usuário cadastrado com sucesso';
-    }
+
+    //let erro = req.query.erro || '';
+    //if (erro == 1) {
+     //   erro = 'Email ou senha incorretos';
+    //} else if (erro == 2) {
+    //    erro = 'Usuário cadastrado com sucesso';
+    //}
 
     
     res.locals.layoutVariables = {
         url: process.env.URL,
         title: "Login"
     };
-    res.render('login', { erro });
 }
 
 function cadastro(req, res) {
