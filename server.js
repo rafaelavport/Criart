@@ -1,11 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2/promise');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configuração da conexão com o banco de dados
 const db = mysql.createPool({
     host: 'mysql.infocimol.com.br',
     user: 'infocimol05',
@@ -16,7 +14,14 @@ const db = mysql.createPool({
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Rota para autenticação
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
+app.set('layout', './layouts/default/login');
+
+app.get('/', (req, res) => {
+    usuarioController.login(req, res);
+});
+
 app.get('/', async (req, res) => {
     const { email, senha } = req.body;
 

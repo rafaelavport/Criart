@@ -22,20 +22,17 @@ app.use(session({
     store: sessionStore
 }));
 
-// Define as configurações do EJS
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
-app.set('layout', './layouts/default/login'); // Isso define o layout padrão para as visualizações EJS
+app.set('layout', './layouts/default/login');
 
 app.get('/', (req, res) => {
-    // Você não precisa definir o layout aqui, pois já está configurado nas configurações do EJS
     usuarioController.login(req, res);
 });
 
-// Resto do seu código...
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`servidor rodando em ${port}`);
 });
 
 
@@ -107,8 +104,4 @@ app.listen(port, () => {
        // console.error('Erro ao autenticar:', error);
        // res.status(500).json({ success: false, message: 'Erro no servidor.' });
     //}
-//});
-
-//app.listen(PORT, () => {
-    //console.log(`Servidor rodando na porta ${PORT}`);
 //});

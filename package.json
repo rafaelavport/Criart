@@ -4,7 +4,7 @@
   "description": "Plataforma para criação de personagens de RPG desenvolvida em HTML 5, CSS 3 e Javascript.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
