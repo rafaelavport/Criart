@@ -19,7 +19,7 @@ app.use(session({
     saveUninitialized: true,
     store: sessionStore
 }));
-console.log(session)
+console.log("0")
 
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
@@ -28,7 +28,7 @@ app.set('layout', './layouts/default/login');
 app.get('/', (req, res) => {
     usuarioController.login(req, res);
 });
-console.log(usuarioController)
+console.log("1")
 
 
 app.listen(port, () => {
