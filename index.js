@@ -12,6 +12,7 @@ const sessionStore = new MySQLStore({
     password: '12345678',
     database: 'Criart'
 });
+console.log("007")
 
 app.use(session({
     secret: 'chavezona',
@@ -34,6 +35,7 @@ console.log("1")
 app.listen(port, () => {
     console.log(`servidor rodando em ${port}`);
 });
+console.log("3")
 
 
 //app.use(expressLayouts);
