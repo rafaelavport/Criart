@@ -3,9 +3,7 @@ const app = express();
 const port = 3000; 
 const expressLayouts = require('express-ejs-layouts');
 require('dotenv').config();
-const path = require('path');
 const usuarioController = require('./controllers/usuarioController');
-const personagemController = require('./controllers/personagemController');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
 const sessionStore = new MySQLStore({
