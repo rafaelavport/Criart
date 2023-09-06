@@ -6,7 +6,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const usuarioController = require('./controllers/usuarioController');
-console.log("0")
 
 const db = mysql.createPool({
     host: 'mysql.infocimol.com.br',
@@ -14,7 +13,6 @@ const db = mysql.createPool({
     password: 'criart123',
     database: 'Criart'
 });
-console.log("1")
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
