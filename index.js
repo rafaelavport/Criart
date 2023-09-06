@@ -12,7 +12,6 @@ const sessionStore = new MySQLStore({
     password: '12345678',
     database: 'Criart'
 });
-console.log("007")
 
 app.use(session({
     secret: 'chavezona',
@@ -20,22 +19,22 @@ app.use(session({
     saveUninitialized: true,
     store: sessionStore
 }));
-console.log("0")
 
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
-app.set('layout', './layouts/default/login');
+// Remova o './' do caminho do layout
+app.set('layout', 'layouts/default/login'); 
 
 app.get('/', (req, res) => {
-    usuarioController.login(req, res);
+    // Certifique-se de que a rota 'login' corresponda ao nome do arquivo EJS (sem a extensão .ejs)
+    res.render('login');
 });
-console.log("1")
-
 
 app.listen(port, () => {
     console.log(`servidor rodando em ${port}`);
 });
-console.log("3")
+
+
 
 
 //app.use(expressLayouts);
