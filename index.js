@@ -3,6 +3,7 @@ const app = express();
 require('dotenv').config();
 const usuarioController = require('./controllers/usuarioController');
 const session = require('express-session');
+const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
     host: 'mysql27-farm10.kinghost.net',
