@@ -1,39 +1,80 @@
 const express = require('express'); 
 const app = express(); 
-const port = 3000; 
-const expressLayouts = require('express-ejs-layouts');
 require('dotenv').config();
 const usuarioController = require('./controllers/usuarioController');
 const session = require('express-session');
-const MySQLStore = require('express-mysql-session')(session);
-const sessionStore = new MySQLStore({
-    host: 'localhost',
-    user: 'rafa',
+
+const connection = mysql.createConnection({
+    host: 'mysql27-farm10.kinghost.net',
+    user: 'infocimol05@10.19.8.12',
     password: '12345678',
-    database: 'Criart'
+    database: 'infocimol05'
 });
 
-app.use(session({
-    secret: 'chavezona',
-    resave: false, 
-    saveUninitialized: true,
-    store: sessionStore
-}));
-
-app.set('view engine', 'ejs');
-app.use(expressLayouts);
-// Remova o './' do caminho do layout
-app.set('layout', 'layouts/default/login'); 
-
-app.get('/', (req, res) => {
-    // Certifique-se de que a rota 'login' corresponda ao nome do arquivo EJS (sem a extensão .ejs)
+connection.connect((err) => {
+    if (err) {
+      console.error('Erro ao conectar ao banco de dados:', err);
+      return;
+    }
+    console.log('Conexão ao banco de dados MySQL bem-sucedida');
+  });
+  
+  app.use(express.static('public'));
+  app.set('view engine', 'ejs');
+  app.set('views', path.join(__dirname, 'views'));
+  
+  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(session({
+    secret: 'batatinha',
+    resave: false,
+    saveUninitialized: true
+  }));
+  
+  app.get('/', (req, res) => {
     res.render('login');
-});
+  });
+  
+  app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+  
+    try {
+      const checkUserQuery = `SELECT * FROM usuario WHERE username = ?`;
+  
+      connection.query(checkUserQuery, [username], (err, results) => {
+        if (err) {
+          console.error('Erro na consulta ao banco de dados: ' + err.message);
+          res.status(500).send('Erro interno no 1servidor');
+          return;
+        }
+  
+        if (results.length > 0) {
+          res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
+        } else {
+          const insertUserQuery = `INSERT INTO usuario (username, password) VALUES (?, ?)`;
+          const hashedPassword = md5(password);
+  
+          connection.query(insertUserQuery, [username, hashedPassword], (err, result) => {
+            if (err) {
+              console.error('Erro na inserção do usuário: ' + err.message);
+              res.status(500).send('Erro interno no 2servidor');
+              return;
+            }
+  
+            console.log('Usuário cadastrado com sucesso.');
+            res.redirect('/cadastro');
+            
+          });
+        }
+      });
+    } catch (err) {
+      console.error('Erro no cadastro do usuário: ' + err.message);
+      res.status(500).send('Erro interno no 3servidor');
+    }
+  });
 
-app.listen(port, () => {
-    console.log(`servidor rodando em ${port}`);
-});
-
+  app.listen(10000, () => {
+    console.log('Servidor rodando em http://0.0.0.0:10000')
+  })
 
 
 
