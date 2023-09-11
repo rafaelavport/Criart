@@ -37,12 +37,12 @@ connection.connect((err) => {
   });
   
   app.post('/login', async (req, res) => {
-    const { username, password } = req.body;
+    const { email, senha } = req.body;
   
     try {
-      const checkUserQuery = `SELECT * FROM usuario WHERE username = ?`;
+      const checkUserQuery = `SELECT * FROM usuario WHERE email = ?`;
   
-      connection.query(checkUserQuery, [username], (err, results) => {
+      connection.query(checkUserQuery, [email], (err, results) => {
         if (err) {
           console.error('Erro na consulta ao banco de dados: ' + err.message);
           res.status(500).send('Erro interno no 1servidor');
@@ -52,10 +52,10 @@ connection.connect((err) => {
         if (results.length > 0) {
           res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
         } else {
-          const insertUserQuery = `INSERT INTO usuario (username, password) VALUES (?, ?)`;
-          const hashedPassword = md5(password);
+          const insertUserQuery = `INSERT INTO usuario (email, senha) VALUES (?, ?)`;
+          const hashedsenha = md5(senha);
   
-          connection.query(insertUserQuery, [username, hashedPassword], (err, result) => {
+          connection.query(insertUserQuery, [email, hashedsenha], (err, result) => {
             if (err) {
               console.error('Erro na inserção do usuário: ' + err.message);
               res.status(500).send('Erro interno no 2servidor');
