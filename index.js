@@ -2,10 +2,10 @@ const express = require('express');
 const app = express(); 
 require('dotenv').config();
 const bodyParser = require('body-parser');
-const usuarioController = require('./controllers/usuarioController');
 const session = require('express-session');
 const mysql = require('mysql2');
 const path = require('path');
+const md5 = require('md5');
 
 const connection = mysql.createConnection({
     host: 'mysql27-farm10.kinghost.net',

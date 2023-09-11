@@ -1,59 +1,40 @@
-body {
+body{
+    background-color: #000000;
     font-family: monospace;
-    color: #fff;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
-.login-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.tela-login1-img img{
+    width: 70vw;
+    height: 22vh;
+    padding-top: 10vh;
+    padding-left: 28vw;
 }
-
-h1 {
-    font-size: 24px;
+.tela-login1-forms-email input{
+    width: 25vw;
+    height: 8vh;
+    border-radius: 10vh;
+    margin-top: 15vh;
+    margin-left: 35vw;
+    padding: 1vw;
 }
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.tela-login1-forms-senha input{
+    width: 25vw;
+    height: 8vh;
+    border-radius: 10vh;
+    margin-top: 5vh;
+    margin-left: 35vw;
+    padding: 1vw;
 }
-
-.form-group {
-    margin: 10px 0;
+.tela-login1-forms-senha button{
+    width: 20vw;
+    height: 8vh;
+    border-radius: 10vh;
+    margin-top: 8vh;
+    margin-left: 38vw;
 }
-
-label {
-    font-size: 18px;
+.tela-login1-forms-senha button:hover{
+    background-color: #252525;
 }
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #ff5722;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff7733;
+.tela-login1-comando-fazer-conta{
+    margin-top: 4vh;
+    margin-left: 42vw;
 }
