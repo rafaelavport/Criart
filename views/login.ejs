@@ -8,18 +8,22 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-  <h1>Login</h1>
-    <form method="POST" action="/login">
-        <div>
-          <input type="text" name="email" placeholder="Email">
+  <div class="login-container">
+    <h1>Bem-vindo ao RPG Adventure</h1>
+    <form method="POST" action="/login" class="login-form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="Digite seu email" required>
         </div>
-        <div>
-          <input type="password" name="senha" placeholder="Senha">
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
         </div>
-        <div>
-          <input type="submit" name="login" placeholder="Login">
+        <div class="form-group">
+          <button type="submit" name="login">Entrar</button>
         </div>
     </form>
+  </div>
   </body>
 </html>
         
