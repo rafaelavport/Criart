@@ -9,7 +9,7 @@ const path = require('path');
 
 const connection = mysql.createConnection({
     host: 'mysql27-farm10.kinghost.net',
-    user: 'infocimol05@10.19.8.12',
+    user: 'infocimol05',
     password: 'criart123',
     database: 'infocimol05'
 });
