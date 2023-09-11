@@ -1,6 +1,7 @@
 const express = require('express'); 
 const app = express(); 
 require('dotenv').config();
+const bodyParser = require('body-parser');
 const usuarioController = require('./controllers/usuarioController');
 const session = require('express-session');
 const mysql = require('mysql2');
