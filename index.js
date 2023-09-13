@@ -64,7 +64,7 @@ connection.connect((err) => {
             }
   
             console.log('Usuário cadastrado com sucesso.');
-            res.redirect('/cadastro');
+            res.redirect('/home');
             
           });
         }
