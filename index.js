@@ -75,63 +75,14 @@ connection.connect((err) => {
     }
   });
 
+  app.get('/home', (req, res) => {
+    res.render('home');
+  });
+
   app.listen(10000, () => {
     console.log('Servidor rodando em http://0.0.0.0:10000')
   })
 
-
-
-//app.use(expressLayouts);
-//app.set('layout', 'views/layouts/default/login');
-//app.set('view engine', 'ejs');
-
-//app.use(express.urlencoded({ extended: true })); 
-//app.use(express.static(path.join(__dirname, 'public')));
-
-//app.use((req, res, next) => {
-    //if (req.session.usuario) {
-       // console.log('Logado');
-      //  res.locals.layoutVariables ={
-      //      usuario: req.session.usuario
-      //  };
-      //  next();
-    //}else{
-       // console.log('Não logado');
-       // if(req.url == '/cadastro' || req.url == '/perfil' || req.url == '/logout'){
-        //    res.redirect('/login?erro=2');
-      //  }else{
-       //     res.locals.layoutVariables ={
-       //         usuario: req.session.usuario
-       //     };
-       //     next();
-      //  }
-  //  }
-//});
-
-//app.get('/', (req, res) => {
-    //app.set('layout', './layouts/login');
-    //res.render('login');
-//});
-
-
-
-//const express = require('express');
-//const bodyParser = require('body-parser');
-//const mysql = require('mysql2/promise');
-
-//const app = express();
-//const PORT = process.env.PORT || 3000;
-
-// Configuração da conexão com o banco de dados
-//const db = mysql.createPool({
-   // host: 'mysql.infocimol.com.br',
-   // user: 'infocimol05',
-   // password: 'criart123',
-   // database: 'Criart'
-//})
-
-//app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.json());
 
 // Rota para autenticação
 //app.get('/', async (req, res) => {
