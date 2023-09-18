@@ -75,8 +75,8 @@ connection.connect((err) => {
     }
   });
 
-  app.get('/home', (req, res) => {
-    res.render('home');
+  app.get('/personagem', (req, res) => {
+    res.render('personagem');
   });
 
   app.listen(10000, () => {
