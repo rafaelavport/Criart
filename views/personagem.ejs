@@ -9,43 +9,55 @@
     <link rel="icon" href="./imagens/logoroxa.png">
 </head>
 <body>
-    <label for="cabelo">Cabelo:</label>
-    <select id="cabelo">
-        <option value="cabelo1">Cabelo 1</option>
-        <option value="cabelo2">Cabelo 2</option>
-        <option value="cabelo3">Cabelo 3</option>
-    </select>
-
-    <label for="corpo">Corpo:</label>
-    <select id="corpo">
-        <option value="corpo1">Corpo 1</option>
-        <option value="corpo2">Corpo 2</option>
-        <option value="corpo3">Corpo 3</option>
-    </select>
-
-    <label for="olhos">Olhos:</label>
-    <select id="olhos">
-        <option value="olhos1">Olhos 1</option>
-        <option value="olhos2">Olhos 2</option>
-        <option value="olhos3">Olhos 3</option>
-    </select>
-
-    <button onclick="trocarCaracteristicas()">Trocar Características</button>
-
-    <script>
-        // Função para trocar as características do personagem
-        function trocarCaracteristicas() {
-            // Obtenha os valores selecionados
-            var cabeloSelecionado = document.getElementById('cabelo').value;
-            var corpoSelecionado = document.getElementById('corpo').value;
-            var olhosSelecionados = document.getElementById('olhos').value;
-
-            // Atualize as características do personagem (você pode substituir isso por sua lógica de aplicação)
-            console.log("Cabelo selecionado: " + cabeloSelecionado);
-            console.log("Corpo selecionado: " + corpoSelecionado);
-            console.log("Olhos selecionados: " + olhosSelecionados);
-        }
-        </script>
+    <div class="area-personagem-cabeça">
+        <img src="./imagens/personagens/pele 1.png"  id="div1" alt="">
+        <img src="./imagens/personagens/pele 2.png"  id="div2" alt="">
+        <img src="./imagens/personagens/pele 3.png"  id="div3" alt="">
+        <img src="./imagens/personagens/pele 4.png"  id="div4" alt="">
+        <img src="./imagens/personagens/pele 5.png"  id="div5" alt="">
+        <img src="./imagens/personagens/pele azul.png"  id="div6" alt="">
+        <img src="./imagens/personagens/pele rosa.png"  id="div7" alt="">
+        <img src="./imagens/personagens/pele roxa.png"  id="div8" alt="">
+        <img src="./imagens/personagens/pele verde.png"  id="div9" alt="">
+    </div>
+    <i class="bi bi-arrow-right-short" style="font-size: 5rem; color: rgb(0, 0, 0); margin-left: 93vw;" onclick="troca()"></i>
+    <div class="area-grande-personagens">
+        <div class="area-selecao-personagem">       
+            <div class="quadrado-1" onclick="Mudarestado('div1')">                
+                <img src="./imagens/personagens/pele 1.png" alt="">
+            </div>
+            <div class="quadrado-2" onclick="Mudarestado('div2')">
+                <img src="./imagens/personagens/pele 2.png" alt="">
+            </div>
+            <div class="quadrado-3" onclick="Mudarestado('div3')">
+                <img src="./imagens/personagens/pele 3.png" alt="">
+            </div>
+            <div class="quadrado-4" onclick="Mudarestado('div4')">
+                <img src="./imagens/personagens/pele 4.png" alt="">
+            </div>
+            <div class="quadrado-5" onclick="Mudarestado('div5')">
+                <img src="./imagens/personagens/pele 5.png" alt="">
+            </div>
+            <div class="quadrado-1" onclick="Mudarestado('div6')">
+                <img src="./imagens/personagens/pele azul.png" alt="">
+            </div>
+            <div class="quadrado-2" onclick="Mudarestado('div7')">
+                <img src="./imagens/personagens/pele rosa.png" alt="">
+            </div>
+            <div class="quadrado-3" onclick="Mudarestado('div8')">
+                <img src="./imagens/personagens/pele roxa.png" alt="">
+            </div>
+            <div class="quadrado-5" onclick="Mudarestado('div9')">
+                <img src="./imagens/personagens/pele verde.png" alt="">
+            </div>
+            <div class="quadrado-1" >
+            </div>
+            <div class="quadrado-2" >
+            </div>
+            <div class="quadrado-3" >
+            </div>                
+        </div>
+    </div>
 </body>
 <script src="./js/personagem.js"></script>
 </html>
