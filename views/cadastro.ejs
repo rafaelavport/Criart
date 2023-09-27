@@ -10,23 +10,22 @@
     <link rel="stylesheet" href="./css/cadastro.css">
 </head>
 <body>
-    <div class="tela-login2-img">
+    <form method="POST" action="/cadastro">
+      <div>
         <img src="./imagens/logo.png" alt="">
-    </div>
-    <div class="tela-login2-forms-apelido">
-        <input id="apelido" type="apelido" placeholder="Apelido">
-    </div>
-    <div class="tela-login2-forms-email">
-        <input id="email" type="email" placeholder="E-mail">
-    </div>
-    <div class="tela-login2-forms-senha">
-        <input id="senha" type="password" placeholder="Senha">
-            <button type="button" class="btn btn-outline-secondary" onclick="Logar()">Entrar</button>
-    </div>
-    <div class="tela-login2-comando-fazer-conta">
-        
-        
-    </div>
-</body>
-<script src="script.js"></script>
+      </div>
+        <div>
+          <input type="text" name="email" placeholder="Email">
+        </div>
+        <div>
+          <input type="password" name="senha" placeholder="Senha">
+        </div>
+        <div>
+          <button type="submit">Entrar</button>
+        </div>
+        <div>
+          <h6 id="Logar">Já possui uma conta?</h6>
+        </div>
+    </form>
+  </body>
 </html>
