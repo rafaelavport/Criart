@@ -37,6 +37,7 @@ connection.connect((err) => {
     res.render('login');
   });
   
+  //login
   app.post('/login', async (req, res) => {
     const { email, senha } = req.body;
   
@@ -57,6 +58,45 @@ connection.connect((err) => {
           const hashedsenha = md5(senha);
   
           connection.query(insertUserQuery, [email, hashedsenha], (err, result) => {
+            if (err) {
+              console.error('Erro na inserção do usuário: ' + err.message);
+              res.status(500).send('Erro interno no 2servidor');
+              return;
+            }
+  
+            console.log('Usuário cadastrado com sucesso.');
+            res.redirect('/home');
+            
+          });
+        }
+      });
+    } catch (err) {
+      console.error('Erro no cadastro do usuário: ' + err.message);
+      res.status(500).send('Erro interno no 3servidor');
+    }
+  });
+
+  //cadastro
+  app.post('/cadastro', async (req, res) => {
+    const { apelido, email, senha } = req.body;
+  
+    try {
+      const checkUserQuery = `SELECT * FROM usuario WHERE email = ?`;
+  
+      connection.query(checkUserQuery, [email], (err, results) => {
+        if (err) {
+          console.error('Erro na consulta ao banco de dados: ' + err.message);
+          res.status(500).send('Erro interno no 1servidor');
+          return;
+        }
+  
+        if (results.length > 0) {
+          res.send('Email já cadastrado. Escolha outro email.');
+        } else {
+          const insertUserQuery = `INSERT INTO usuario (apelido, email, senha) VALUES (?, ?, ?)`;
+          const hashedsenha = md5(senha);
+  
+          connection.query(insertUserQuery, [apelido, email, hashedsenha], (err, result) => {
             if (err) {
               console.error('Erro na inserção do usuário: ' + err.message);
               res.status(500).send('Erro interno no 2servidor');
