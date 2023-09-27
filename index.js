@@ -126,22 +126,3 @@ connection.connect((err) => {
   app.listen(10000, () => {
     console.log('Servidor rodando em http://0.0.0.0:10000')
   })
-
-
-// Rota para autenticação
-//app.get('/', async (req, res) => {
-   //const { email, senha } = req.body;
-
-    //try {
-//const [rows] = await db.execute('SELECT * FROM usuario WHERE email = ? AND senha = ?', [email, senha]);
-//
-   //     if (rows.length > 0) {
-   //         res.json({ success: true, message: 'Login bem-sucedido!' });
-   //     } else {
-   //         res.json({ success: false, message: 'Credenciais inválidas.' });
-    //    }
-   // } catch (error) {
-       // console.error('Erro ao autenticar:', error);
-       // res.status(500).json({ success: false, message: 'Erro no servidor.' });
-    //}
-//});
