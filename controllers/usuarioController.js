@@ -18,21 +18,6 @@ function login(req, res) {
     };
 }
 
-function cadastro(req, res) {
-    let erro = req.query.erro || '';
-    if (erro == 1) {
-        erro = 'Já existe um usuário com esse email';
-    } else if (erro == 2) {
-        erro = 'Senhas não conferem';
-    }
-    
-    res.locals.layoutVariables = {
-        url: process.env.URL,
-        title: "Cadastro"
-    };
-    res.render('cadastro', { erro });
-}
-
 async function autenticar(req, res) {
     console.log(req.body);
     const { email, senha } = req.body;
@@ -51,28 +36,6 @@ async function autenticar(req, res) {
     } else {
         console.log('Usuário não encontrado');
         res.redirect('/login?erro=1');
-    }
-}
-
-async function cadastrar(req, res) {
-    console.log(req.body);
-    const { nome, email, senha, senha2 } = req.body;
-    
-    if (senha !== senha2) {
-        console.log('Senhas não conferem');
-        res.redirect('/cadastro?erro=2');
-    } else {
-        let resp = await usuarioModel.cadastrarUsuario(nome, email, senha);
-        if (resp === false) {
-            console.log('Usuário já existe');
-            res.redirect('/cadastro?erro=1');
-        } else if (resp.affectedRows > 0) {
-            console.log('Usuário cadastrado');
-            res.redirect('/login?erro=2');
-        } else {
-            console.log('Erro ao cadastrar usuário');
-            res.redirect('/cadastro');
-        }
     }
 }
 
