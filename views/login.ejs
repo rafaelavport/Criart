@@ -9,23 +9,30 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <form method="POST" action="/login">
-      <div>
-        <img src="./imagens/logo.png" alt="">
-      </div>
-        <div>
-          <input type="text" name="email" placeholder="Email">
-        </div>
-        <div>
-          <input type="password" name="senha" placeholder="Senha">
-        </div>
-        <div>
-          <button type="submit">Entrar</button>
-        </div>
-        <div>
-          <h6 id="fazerConta">Não possui uma conta?</h6>
-        </div>
-    </form>
+  <form method="POST" action="/login">
+    <div>
+      <img src="./imagens/logo.png" alt="">
+    </div>
+    <div>
+      <input type="text" name="email" placeholder="Email">
+    </div>
+    <div>
+      <input type="password" name="senha" placeholder="Senha">
+    </div>
+    <div>
+      <button type="submit">Entrar</button>
+    </div>
+    <div>
+      <h6 id="fazerConta">Não possui uma conta?</h6>
+    </div>
+  </form>
+  
+  <script>
+    document.getElementById('fazerConta').onclick = function() {
+      window.location.href = '/cadastro';
+    };
+  </script>
+  
   </body>
   <script src="./js/login.js"></script>
 </html>
