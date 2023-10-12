@@ -33,8 +33,24 @@ connection.connect((err) => {
     saveUninitialized: true
   }));
   
+  //rota login
   app.get('/', (req, res) => {
     res.render('login');
+  });
+
+  //rota cadastro
+  app.get('/cadastro', (req, res) => {
+    res.render('cadastro');
+  });
+
+  //rota home
+  app.get('/home', (req, res) => {
+    res.render('home');
+  });
+
+  //rota personagem
+  app.get('/personagem', (req, res) => {
+    res.render('personagem');
   });
   
   //login
@@ -108,14 +124,6 @@ connection.connect((err) => {
     res.status(500).send('Erro interno no 3servidor');
   }
 });
-
-  app.get('/home', (req, res) => {
-    res.render('home');
-  });
-
-  app.get('/personagem', (req, res) => {
-    res.render('personagem');
-  });
 
   app.listen(10000, () => {
     console.log('Servidor rodando em http://0.0.0.0:10000')
