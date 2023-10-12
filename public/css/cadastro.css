@@ -37,4 +37,7 @@ button {
 h6{
     margin-top: 4vh;
     margin-left: 42vw;
+    cursor: pointer;
+    color: antiquewhite;
+    text-decoration: underline;
 }
