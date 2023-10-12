@@ -4,5 +4,5 @@ let senha = document.querySelector(senha)
 let apelido = document.querySelector(apelido)
 
 document.getElementById('Logar').onclick = function(){
-    window.location.href='/login';
+    window.location.href='/';
 }
