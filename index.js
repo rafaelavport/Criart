@@ -114,7 +114,8 @@ connection.connect((err) => {
           res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
     } else {
       const insertUserQuery = 'INSERT INTO usuario (apelido, email, senha) VALUES (?, ?, ?)';
-    await query(insertUserQuery, [apelido, email, senhaCriptografada]);
+      const hashedsenha = md5(senha);
+    await query(insertUserQuery, [apelido, email, hashedsenha]);
     }
 
     console.log('Usuário cadastrado com sucesso.');
