@@ -113,7 +113,7 @@ connection.connect((err) => {
     if (results.length > 0) {
           res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
     } else {
-      const insertUserQuery = 'INSERT INTO usuario (apelido, email, senha) VALUES (?, ?, ?';
+      const insertUserQuery = 'INSERT INTO usuario (apelido, email, senha) VALUES (?, ?, ?)';
     await query(insertUserQuery, [apelido, email, senhaCriptografada]);
     }
 
