@@ -1,33 +1,48 @@
-body {
-    font-family: monospace;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px;
+*{
+    background-color: rgb(255, 255, 255);
 }
-
-h1 {
-    color: #333;
+.area-personagem-cabeça img{
+    z-index: 1;
+    margin-top: 22vh;
+    margin-left: 16vw;
+    position: absolute;
+    width: 12vw;
+    height: 42vh;
 }
-
-label {
-    font-weight: bold;
+.area-grande-personagens{
+    float: right;
+    background-color: rgb(155, 155, 155);
+    border-radius: 2vh;
+    margin: 7vh;
+    width: 45vw;
+    height: 60vh;
 }
-
-select {
-    padding: 5px;
-    font-size: 16px;
-    margin: 10px;
+.area-selecao-personagem{
+    margin-top: 15vh;
+    margin-left: 8vw;
+    margin-right: 5vw;
 }
-
-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.quadrado-1, 
+.quadrado-2, 
+.quadrado-3, 
+.quadrado-4, 
+.quadrado-5{
+    background-color: black;
+    border-radius: 1vw;
+    width: 6vw;
+    height: 10vh;
+    float: left;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    
 }
-
-button:hover {
-    background-color: #0056b3;
+.quadrado-1 img, 
+.quadrado-2 img, 
+.quadrado-3 img, 
+.quadrado-4 img, 
+.quadrado-5 img{
+    background-color: black;
+    height: 4vh;
+    margin-left: 2vw;
+    margin-top: 3vh;
 }
