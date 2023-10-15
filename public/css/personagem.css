@@ -1,6 +1,6 @@
 body {
     background-color: #fff; /* Fundo branco */
-    font-family: monospace;
+    font-family: Arial, sans-serif;
 }
 
 .area-personagem-cabeça {
@@ -33,6 +33,7 @@ body {
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: none; /* Oculta todas as divs por padrão */
 }
 
 .quadrado img {
@@ -44,9 +45,13 @@ body {
     background-color: #000; /* Fundo preto ao passar o mouse */
 }
 
+.quadrado.show {
+    display: block; /* Exibe a div com a classe 'show' */
+}
+
 .bi-arrow-right-short {
     font-size: 5rem;
-    color: #fff; /* Ícone branco */
+    color: #000; /* Ícone branco */
     cursor: pointer;
 }
 
