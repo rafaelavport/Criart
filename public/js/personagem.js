@@ -1,10 +1,9 @@
-
-
-
 function Mudarestado(el) {
-        var display = document.getElementById(el).style.display;
-        if(display == "none")
-            document.getElementById(el).style.display = 'block';
-        else
-            document.getElementById(el).style.display = 'none';
+    var elements = document.querySelectorAll('.area-selecao-personagem .quadrado');
+    elements.forEach(function (element) {
+        element.classList.remove('show');
+        element.classList.add('hide');
+    });
+    document.getElementById(el).classList.remove('hide');
+    document.getElementById(el).classList.add('show');
 }
