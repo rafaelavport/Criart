@@ -1,10 +1,8 @@
 function Mudarestado(el) {
-    var elements = document.querySelectorAll('.area-selecao-personagem .quadrado');
+    var elements = document.querySelectorAll('.personagem');
     elements.forEach(function (element) {
-        if (element.id !== el) {
-            element.classList.add('hide');
-            element.classList.remove('show');
-        }
+        element.classList.add('hide');
+        element.classList.remove('show');
     });
     var selectedElement = document.getElementById(el);
     selectedElement.classList.remove('hide');
