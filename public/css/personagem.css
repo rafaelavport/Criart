@@ -45,7 +45,7 @@ body {
     background-color: #000; /* Fundo preto ao passar o mouse */
 }
 
-.quadrado.show {
+.quadrado {
     display: block; /* Exibe a div com a classe 'show' */
 }
 
