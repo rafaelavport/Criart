@@ -33,7 +33,7 @@ body {
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    display: none; /* Oculta todas as divs por padrão */
+    display: block; /* Oculta todas as divs por padrão */
 }
 
 .quadrado img {
@@ -43,10 +43,6 @@ body {
 
 .quadrado:hover {
     background-color: #000; /* Fundo preto ao passar o mouse */
-}
-
-.quadrado {
-    display: block; /* Exibe a div com a classe 'show' */
 }
 
 .bi-arrow-right-short {
