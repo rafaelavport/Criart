@@ -25,10 +25,10 @@ body {
 }
 
 .quadrado {
-    width: 6vw;
+    width: 3vw;
     height: 10vh;
     background-color: #fff; 
-    margin: 1vh;
+    margin: 10vh;
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 10vh;
