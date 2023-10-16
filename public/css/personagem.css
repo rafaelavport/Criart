@@ -25,10 +25,10 @@ body {
 }
 
 .quadrado {
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vh;
     background-color: #fff; 
-    margin: 10px;
+    margin: 2vh;
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 10vh;
@@ -36,17 +36,18 @@ body {
 }
 
 .quadrado img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 1vh;
 }
 
 .quadrado:hover {
-    background-color: #000; /* Fundo preto ao passar o mouse */
+    background-color: #24bb24; /* Fundo preto ao passar o mouse */
 }
 
 .bi-arrow-right-short {
     font-size: 5rem;
-    color: #000; /* Ícone branco */
+    color: #000; 
     cursor: pointer;
 }
 
