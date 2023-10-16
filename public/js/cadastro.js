@@ -1,7 +1,7 @@
 
 let email = document.querySelector(email)
 let senha = document.querySelector(senha)
-let apelido = document.querySelector(apelido)
+let nome = document.querySelector(nome)
 
 document.getElementById('Logar').onclick = function(){
     window.location.href='/';
