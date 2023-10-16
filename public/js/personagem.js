@@ -11,8 +11,8 @@ function Mudarestado(el, imgSrc) {
     areaPersonagemCabeca.src = imgSrc;
 }
 
-function troca() {
-    // Adicione a lógica para o que acontece quando você clica na seta direita (se necessário).
-}
+document.getElementById('botao').onclick = function(){
+    window.location.href='/tabela';
+  }
 
 

@@ -52,6 +52,11 @@ connection.connect((err) => {
   app.get('/personagem', (req, res) => {
     res.render('personagem');
   });
+
+  //rota tabela atributos
+  app.get('/tabela', (req, res) => {
+    res.render('tabela');
+  });
   
   //login
   app.post('/login', async (req, res) => {
