@@ -117,11 +117,10 @@ connection.connect((err) => {
       const hashedsenha = md5(senha);
     await query(insertUserQuery, [nome, email, hashedsenha]);
     }
-    
     connection.query(insertUserQuery, [nome, email, hashedsenha], (err, result) => {
       if (err) {
         console.error('Erro na inserção do usuário: ' + err.message);
-        res.status(500).send('Erro de insercao do user');
+        res.status(500).send('Erro interno no 2servidor');
         return;
       }
 
@@ -129,6 +128,10 @@ connection.connect((err) => {
       res.redirect('/home');
       
     });
+  } catch (err) {
+    console.error('Erro no cadastro do usuário: ' + err.message);
+    res.status(500).send('Erro interno no 3servidor');
+  }
 });
 
   app.listen(10000, () => {
