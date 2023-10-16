@@ -102,12 +102,7 @@ connection.connect((err) => {
   const { nome, email, senha } = req.body;
 
   try {
-    // Valide a entrada de dados
-    if (!nome || !email || !senha) {
-      return res.status(400).send('Dados de entrada inválidos.');
-    }
-
-    // Verifique se o email já existe
+    // email já existe
     const checkUserQuery = 'SELECT * FROM usuario WHERE email = ?';
     const usuarioExistente = await query(checkUserQuery, [email]);
 
