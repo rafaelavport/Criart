@@ -102,35 +102,37 @@ connection.connect((err) => {
   const { nome, email, senha } = req.body;
 
   try {
-    // email já existe
-    const checkUserQuery = 'SELECT * FROM usuario WHERE email = ?';
-    const usuarioExistente = await query(checkUserQuery, [email]);
+    const checkUserQuery = `SELECT * FROM usuario WHERE email = ?`;
 
-    if (usuarioExistente.length > 0) {
-      return res.send('Email já cadastrado. Escolha outro email.');
-    }
-
-    if (results.length > 0) {
-          res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
-    } else {
-      const insertUserQuery = 'INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)';
-      const hashedsenha = md5(senha);
-    await query(insertUserQuery, [nome, email, hashedsenha]);
-    }
-    connection.query(insertUserQuery, [nome, email, hashedsenha], (err, result) => {
+    connection.query(checkUserQuery, [email], (err, results) => {
       if (err) {
-        console.error('Erro na inserção do usuário: ' + err.message);
-        res.status(500).send('Erro interno no 2servidor');
+        console.error('Erro na consulta ao banco de dados: ' + err.message);
+        res.status(500).send('Erro na consulta ao mysql');
         return;
       }
 
-      console.log('Usuário cadastrado com sucesso.');
-      res.redirect('/home');
-      
+      if (results.length > 0) {
+        res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
+      } else {
+        const insertUserQuery = `INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)`;
+        const hashedsenha = md5(senha);
+
+        connection.query(insertUserQuery, [nome, email, hashedsenha], (err, result) => {
+          if (err) {
+            console.error('Erro na inserção do usuário: ' + err.message);
+            res.status(500).send('Erro na inserção');
+            return;
+          }
+
+          console.log('Usuário cadastrado com sucesso.');
+          res.redirect('/home');
+          
+        });
+      }
     });
   } catch (err) {
     console.error('Erro no cadastro do usuário: ' + err.message);
-    res.status(500).send('Erro interno no 3servidor');
+    res.status(500).send('Erro no cadastro de user');
   }
 });
 
