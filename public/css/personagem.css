@@ -1,6 +1,6 @@
 body {
-    background-color: #fff; /* Fundo branco */
-    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-family: monospace;
 }
 
 .area-personagem-cabeça {
@@ -42,7 +42,7 @@ body {
 }
 
 .quadrado:hover {
-    background-color: #24bb24; /* Fundo preto ao passar o mouse */
+    background-color: #24bb24;
 }
 
 .bi-arrow-right-short {
@@ -51,5 +51,4 @@ body {
     cursor: pointer;
 }
 
-/* Outros estilos, como hovers e transições, podem ser adicionados conforme necessário. */
 

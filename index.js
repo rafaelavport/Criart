@@ -99,11 +99,11 @@ connection.connect((err) => {
 
   //cadastro
   app.post('/cadastro', async (req, res) => {
-  const { apelido, email, senha } = req.body;
+  const { nome, email, senha } = req.body;
 
   try {
     // Valide a entrada de dados
-    if (!apelido || !email || !senha) {
+    if (!nome || !email || !senha) {
       return res.status(400).send('Dados de entrada inválidos.');
     }
 
@@ -118,9 +118,9 @@ connection.connect((err) => {
     if (results.length > 0) {
           res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
     } else {
-      const insertUserQuery = 'INSERT INTO usuario (apelido, email, senha) VALUES (?, ?, ?)';
+      const insertUserQuery = 'INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)';
       const hashedsenha = md5(senha);
-    await query(insertUserQuery, [apelido, email, hashedsenha]);
+    await query(insertUserQuery, [nome, email, hashedsenha]);
     }
 
     console.log('Usuário cadastrado com sucesso.');
