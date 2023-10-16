@@ -7,7 +7,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Fundo preto */
     padding: 20px;
 }
 
@@ -17,7 +16,6 @@ body {
 }
 
 .area-grande-personagens {
-    background-color: #000; /* Fundo preto */
     padding: 20px;
 }
 
