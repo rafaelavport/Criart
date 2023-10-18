@@ -53,6 +53,11 @@ connection.connect((err) => {
     res.render('personagem');
   });
 
+  //rota cabelos
+  app.get('/cabelos', (req, res) => {
+    res.render('cabelos');
+  });
+
   //rota tabela atributos
   app.get('/tabela', (req, res) => {
     res.render('tabela');
