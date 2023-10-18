@@ -11,6 +11,10 @@ function Mudarestado(el, imgSrc) {
     areacabelos.src = imgSrc;
 }
 
+var urlParams = new URLSearchParams(window.location.search);
+var peleSelecionada = urlParams.get('pele');
+
 document.getElementById('botao').onclick = function(){
     window.location.href='/tabela';
   }
+
