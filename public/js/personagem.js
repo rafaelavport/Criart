@@ -11,10 +11,9 @@ function Mudarestado(el, imgSrc) {
     areacabelosCabeca.src = imgSrc;
 }
 
-  document.getElementById('botao').onclick = function () {
-    var peleSelecionada = document.querySelector('.area-personagem-cabeça img').src;
+document.getElementById('botao').onclick = function(){
+    window.location.href='/cabelos';
+  }
 
-    window.location.href = '/cabelos?pele=' + encodeURIComponent(peleSelecionada);
-}
 
 
