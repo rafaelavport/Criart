@@ -3,14 +3,14 @@ body {
     font-family: monospace;
 }
 
-.area-personagem-cabeça {
+.area-cabelos {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-.area-personagem-cabeça img {
+.area-cabelos img {
     max-width: 100px;
     margin: 0 10px;
 }
@@ -19,7 +19,7 @@ body {
     padding: 20px;
 }
 
-.area-selecao-personagem {
+.area-cabelos {
     display: flex;
     flex-wrap: wrap;
 }
