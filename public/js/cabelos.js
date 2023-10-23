@@ -11,6 +11,6 @@ function Mudarestado(el, imgSrc) {
     areacabelos.src = imgSrc;
 }
 
-document.getElementById('botao').onclick = function(){
+document.getElementById('botao-c').onclick = function(){
     window.location.href='/tabela';
   }

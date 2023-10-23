@@ -26,8 +26,7 @@ body {
 }
 
 .quadrado {
-    width: 4vw;
-    height: 10vh;
+    width: 5vw;
     background-color: #fff; 
     margin: 8vw;
     cursor: pointer;
