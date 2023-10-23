@@ -25,20 +25,29 @@ body {
 }
 
 .quadrado {
-    margin: 10px;
+    width: 3vw;
+    height: 10vh;
+    background-color: #fff; 
+    margin: 10vh;
     cursor: pointer;
     transition: background-color 0.3s;
-    display: none; 
+    border-radius: 10vh;
     display: block; 
 }
 
 .quadrado img {
-    background-color: #000;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 1vh;
+}
+
+.quadrado:hover {
+    background-color: #24bb24;
 }
 
 .bi-arrow-right-short {
     font-size: 5rem;
     color: #000; 
+    cursor: pointer;
 }
-
 
