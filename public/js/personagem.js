@@ -16,9 +16,6 @@ document.getElementById("botao-p").addEventListener("click", function() {
         document.body.classList.add("cabelos");
 });
 
-document.getElementById('botao-p').onclick = function(){
-    window.location.href='/cabelos';
-  }
 
 
 
