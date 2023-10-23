@@ -20,15 +20,16 @@ body {
 }
 
 .area-selecao-cabelos {
+    background-color: chocolate;
     display: flex;
     flex-wrap: wrap;
 }
 
 .quadrado {
-    width: 3vw;
+    width: 4vw;
     height: 10vh;
     background-color: #fff; 
-    margin: 10vh;
+    margin: 8vw;
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 10vh;
@@ -42,7 +43,7 @@ body {
 }
 
 .quadrado:hover {
-    background-color: #24bb24;
+    background-color: #686868;
 }
 
 .bi-arrow-right-short {
