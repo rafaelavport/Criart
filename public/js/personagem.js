@@ -1,17 +1,14 @@
-function Mudarestado(el) {
-    var elements = document.querySelectorAll('.personagem');
-    var elements = document.querySelectorAll('.area-selecao-personagem .quadrado');
+function Mudarestado(el, imgSrc) {
+    var elements = document.querySelectorAll('.quadrado.cabelos');
     elements.forEach(function (element) {
-        element.classList.add('hide');
-        element.classList.remove('show');
+        element.classList.remove('selected');
     });
-    var selectedElement = document.getElementById(el);
-    selectedElement.classList.remove('hide');
-    selectedElement.classList.add('show');
-    document.getElementById(el).classList.remove('hide');
 
-    var areaPersonagemCabeca = document.querySelector('.area-personagem-cabeça');
-    areaPersonagemCabeca.classList.remove('hide');
+    var selectedElement = document.getElementById(el);
+    selectedElement.classList.add('selected');
+
+    var areacabelosCabeca = document.querySelector('.area-cabelos-cabeça img');
+    areacabelosCabeca.src = imgSrc;
 }
 
 document.getElementById('botao').onclick = function(){

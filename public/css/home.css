@@ -1,28 +1,46 @@
+
 *{
     background-color: black;
-    font-family: 'Roboto Mono', monospace;
+    font-family: monospace;
 }
+
 .tela-principal-logo img{
     width: 40vw;
     height: 10vh;
     padding-top: 2vh;
     padding-left: 2vw;
 }
+
 h1{
     color: #101010;
     margin: 20vh;
 }
+
 .boxes{
     width: 80vw;
     height: 120vh;
     position: absolute;
     margin-top: 20vh;
 }
-.box {
+
+.box1 {
     width: 40vw;
     height: 50vh;
     margin-left: 2vw;
-    background-color: rgb(255, 255, 255);
+    float: left;
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.box2 {
+    width: 40vw;
+    height: 50vh;
+    margin-right: 2vw;
+    float: right;
+    position: absolute;
+    background-color: white;
     opacity: 0;
     transition: opacity 0.5s;
 }
