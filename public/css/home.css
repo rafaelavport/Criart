@@ -18,8 +18,6 @@ h1{
 }
 
 .boxes{
-    width: 80vw;
-    height: 120vh;
     position: absolute;
     margin-top: 20vh;
 }
@@ -29,6 +27,7 @@ h1{
     height: 50vh;
     margin-left: 2vw;
     float: left;
+    border-radius: 10vh;
     position: absolute;
     background-color: white;
     opacity: 0;
@@ -40,6 +39,7 @@ h1{
     height: 50vh;
     margin-right: 2vw;
     float: right;
+    border-radius: 10vh;
     position: absolute;
     background-color: white;
     opacity: 0;
