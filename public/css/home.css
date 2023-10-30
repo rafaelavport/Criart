@@ -18,6 +18,8 @@ h1{
 }
 
 .boxes{
+    width: 80vw;
+    height: 2000vh;
     position: absolute;
     margin-top: 20vh;
 }
