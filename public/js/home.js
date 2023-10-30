@@ -2,7 +2,7 @@ document.getElementById('botao').onclick = function(){
   window.location.href='/personagem';
 }
 
-const box = document.querySelector('.box');
+const box = document.querySelector('.boxes');
 
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
