@@ -21,14 +21,17 @@ body {
 
 .area-selecao-personagem {
     display: flex;
+    margin-left: 40vw;
     flex-wrap: wrap;
+    background-color: #000;
 }
 
 .quadrado {
+    
     width: 3vw;
     height: 10vh;
     background-color: #fff; 
-    margin: 10vh;
+    margin-left: 50vh;
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 10vh;
