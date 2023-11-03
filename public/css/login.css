@@ -1,9 +1,10 @@
-body{
-    background-image: url('fundo_tela_login.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
+body {
+    background-image: url(./imagens/fundo_tela_login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: monospace;
 }
+
 img{
     width: 70vw;
     height: 22vh;
