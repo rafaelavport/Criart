@@ -1,7 +1,38 @@
+
 body {
     background-color: #fff;
     font-family: monospace;
 }
+
+.area-personagem-cabeça {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.area-personagem-cabeça img {
+    max-width: 100px;
+    margin: 0 10px;
+}
+
+.area-grande-personagens {
+    padding: 20px;
+}
+
+.area-selecao-personagem {
+    display: flex;
+    margin-left: 40vw;
+    flex-wrap: wrap;
+    background-color: #000;
+}
+
+.bi-arrow-right-short {
+    font-size: 5rem;
+    color: #000; 
+    cursor: pointer;
+}
+
 
 .area-cabelos {
     display: flex;
@@ -13,16 +44,6 @@ body {
 .area-cabelos img {
     max-width: 100px;
     margin: 0 10px;
-}
-
-.area-grande-personagens {
-    padding: 20px;
-}
-
-.area-selecao-cabelos {
-    background-color: chocolate;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .quadrado {
