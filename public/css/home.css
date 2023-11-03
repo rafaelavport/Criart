@@ -40,11 +40,11 @@ h1{
 .box2 {
     width: 40vw;
     height: 50vh;
-    margin-right: 2vw;
+    margin-right: 20vw;
     float: right;
     border-radius: 10vh;
     position: absolute;
-    background-color: white;
+    background-color: rgb(255, 0, 0);
     opacity: 0;
     transition: opacity 0.5s;
 }
