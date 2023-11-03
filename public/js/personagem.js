@@ -1,5 +1,5 @@
 function Mudarestado(el, imgSrc) {
-    var elements = document.querySelectorAll('.quadrado .personagem');
+    var elements = document.querySelectorAll('.quadrado .corpo');
     elements.forEach(function (element) {
         element.classList.remove('selected');
     });

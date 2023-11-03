@@ -31,10 +31,10 @@ body {
     width: 3vw;
     height: 10vh;
     background-color: #fff; 
-    margin-left: 50vh;
+    margin-left: 30vw;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-radius: 10vh;
+    border-radius: 1vh;
     display: block; 
 }
 
