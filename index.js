@@ -63,37 +63,25 @@ connection.connect((err) => {
     const { email, senha } = req.body;
   
     try {
-      const checkUserQuery = `SELECT * FROM usuario WHERE email = ?`;
+      const checkUserQuery = `SELECT * FROM usuario WHERE email = ? AND senha = ?`;
   
-      connection.query(checkUserQuery, [email], (err, results) => {
+      connection.query(checkUserQuery, [email, md5(senha)], (err, results) => {
         if (err) {
           console.error('Erro na consulta ao banco de dados: ' + err.message);
-          res.status(500).send('Erro interno no 1servidor');
+          res.status(500).send('Erro interno no servidor');
           return;
         }
   
         if (results.length > 0) {
-          res.send('Nome de usuário já existe. Escolha outro nome de usuário.');
+          // Usuário encontrado, redirecione para a página de home ou realize alguma ação de login.
+          res.redirect('/home');
         } else {
-          const insertUserQuery = `INSERT INTO usuario (email, senha) VALUES (?, ?)`;
-          const hashedsenha = md5(senha);
-  
-          connection.query(insertUserQuery, [email, hashedsenha], (err, result) => {
-            if (err) {
-              console.error('Erro na inserção do usuário: ' + err.message);
-              res.status(500).send('Erro interno no 2servidor');
-              return;
-            }
-  
-            console.log('Usuário cadastrado com sucesso.');
-            res.redirect('/home');
-            
-          });
+          res.status(401).send('Credenciais inválidas. Verifique seu email e senha.');
         }
       });
     } catch (err) {
-      console.error('Erro no cadastro do usuário: ' + err.message);
-      res.status(500).send('Erro interno no 3servidor');
+      console.error('Erro no login do usuário: ' + err.message);
+      res.status(500).send('Erro interno no servidor');
     }
   });
 
