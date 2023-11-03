@@ -1,5 +1,7 @@
 body{
-    background-color: #000000;
+    background-image: url('fundo_tela_login.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
     font-family: monospace;
 }
 img{
