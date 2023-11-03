@@ -7,8 +7,8 @@ function Mudarestado(el, imgSrc) {
     var selectedElement = document.getElementById(el);
     selectedElement.classList.add('selected');
 
-    var areapersoCabeca = document.querySelector('.area-personagem-cabeça img');
-    areapersoCabeca.src = imgSrc;
+    var areacorpo = document.querySelector('.area-personagem-cabeça img');
+    areacorpo.src = imgSrc;
 }
 
 
