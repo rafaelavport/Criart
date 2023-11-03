@@ -1,5 +1,7 @@
-body{
-    background-color: #000000;
+body {
+    background-image: url(../imagens/fundocad.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: monospace;
 }
 img{
