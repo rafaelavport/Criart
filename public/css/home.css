@@ -30,7 +30,6 @@ h1{
     height: 50vh;
     margin-left: 2vw;
     float: left;
-    border-radius: 10vh;
     position: relative;
     background-color: white;
     opacity: 0;
@@ -42,7 +41,6 @@ h1{
     height: 80vh;
     margin-right: 20vw;
     float: right;
-    border-radius: 10vh;
     position: relative;
     background-color: rgb(255, 0, 0);
     opacity: 0;
