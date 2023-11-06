@@ -31,7 +31,7 @@ h1{
     margin-left: 2vw;
     float: left;
     border-radius: 10vh;
-    position: absolute;
+    position: relative;
     background-color: white;
     opacity: 0;
     transition: opacity 0.5s;
@@ -39,11 +39,11 @@ h1{
 
 .box2 {
     width: 40vw;
-    height: 50vh;
+    height: 80vh;
     margin-right: 20vw;
     float: right;
     border-radius: 10vh;
-    position: absolute;
+    position: relative;
     background-color: rgb(255, 0, 0);
     opacity: 0;
     transition: opacity 0.5s;
