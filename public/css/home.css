@@ -15,7 +15,7 @@ body {
 h1{
     color: #101010;
     background-color: white;
-    margin: 20vh;
+    margin: 20px;
 }
 
 .boxes{
@@ -27,7 +27,7 @@ h1{
 
 .box1 {
     width: 40vw;
-    height: 50vh;
+    height: 80vh;
     margin-left: 2vw;
     float: left;
     position: relative;
@@ -39,10 +39,32 @@ h1{
 .box2 {
     width: 40vw;
     height: 80vh;
-    margin-right: 20vw;
+    margin-right: 2vw;
     float: right;
     position: relative;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.box3 {
+    width: 40vw;
+    height: 80vh;
+    margin-left: 2vw;
+    float: left;
+    position: relative;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.box4 {
+    width: 40vw;
+    height: 80vh;
+    margin-right: 2vw;
+    float: right;
+    position: relative;
+    background-color: rgb(255, 255, 255);
     opacity: 0;
     transition: opacity 0.5s;
 }
