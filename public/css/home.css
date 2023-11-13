@@ -3,12 +3,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: monospace;
+    margin: 0;
 }
 
-.tela-principal-logo img{
-    width: 40vw;
-    height: 10vh;
-    padding-top: 2vh;
+.tela-principal-logo{
+    padding-top: 5vh;
     padding-left: 2vw;
 }
 
@@ -19,37 +18,49 @@ h1{
 }
 
 .boxes{
-    width: 80vw;
-    height: 2000vh;
+    height: 200vh;
     position: absolute;
     margin-top: 20vh;
 }
 
 .box1 {
-    width: 40vw;
-    height: 80vh;
-    margin-left: 0%;
+    width: 45vw;
+    height: 45vh;
     float: left;
     position: relative;
     background-color: white;
     opacity: 0;
     transition: opacity 0.5s;
+}
+
+.b1{
+    margin-top: 30px;
+    height: 45vh;
+    width: 47vw;
+    border: solid 4px white;
 }
 
 .box2 {
-    width: 40vw;
-    height: 80vh;
-    margin-left: 60%;
+    width: 45vw;
+    height: 35vh;
     float: right;
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     opacity: 0;
     transition: opacity 0.5s;
 }
 
+.b2{
+    margin-top: 30px;
+    margin-left: 51.25vw;
+    height: 35vh;
+    width: 47vw;
+    border: solid 4px white;
+}
+
 .box3 {
-    width: 40vw;
-    height: 80vh;
+    width: 45vw;
+    height: 45vh;
     float: left;
     position: relative;
     background-color: white;
@@ -57,14 +68,32 @@ h1{
     transition: opacity 0.5s;
 }
 
+.b3{
+    margin-top: 30px;
+    height: 45vh;
+    width: 47vw;
+    border: solid 4px white;
+}
+
 .box4 {
-    width: 40vw;
-    height: 80vh;
-    margin-left: 60%;
+    width: 45vw;
+    height: 35vh;
     float: right;
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     opacity: 0;
     transition: opacity 0.5s;
+}
+
+.b4{
+    margin-top: 30px;
+    margin-left: 51.25vw;
+    height: 35vh;
+    width: 47vw;
+    border: solid 4px white;
+}
+
+h3{
+    color: white;
 }
   

@@ -34,7 +34,7 @@ window.addEventListener('scroll', () => {
   const windowHeight = window.innerHeight;
 
   if (scrollPosition > boxPosition - windowHeight + 400) {
-    box1.style.opacity = 1;
+    box3.style.opacity = 1;
   }
 });
 
@@ -46,6 +46,7 @@ window.addEventListener('scroll', () => {
   const windowHeight = window.innerHeight;
 
   if (scrollPosition > boxPosition - windowHeight + 400) {
-    box2.style.opacity = 1;
+    box4.style.opacity = 1;
   }
 });
+

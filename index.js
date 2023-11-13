@@ -7,6 +7,7 @@ const mysql = require('mysql2');
 const path = require('path');
 const md5 = require('md5');
 
+//conexãp banco de dados
 const connection = mysql.createConnection({
     host: 'mysql27-farm10.kinghost.net',
     user: 'infocimol05',
@@ -53,9 +54,19 @@ connection.connect((err) => {
     res.render('personagem');
   });
 
+  //rota cabelos
+  app.get('/cabelos', (req, res) => {
+    res.render('cabelos');
+  });
+
   //rota tabela atributos
   app.get('/tabela', (req, res) => {
     res.render('tabela');
+  });
+
+  //rota salvar
+  app.get('/salvar', (req, res) => {
+    res.render('salvar');
   });
   
   //login
@@ -124,6 +135,10 @@ connection.connect((err) => {
   }
 });
 
-  app.listen(10000, () => {
-    console.log('Servidor rodando em http://0.0.0.0:10000')
-  })
+  //app.listen(10000, () => {
+    //console.log('Servidor rodando em http://0.0.0.0:10000')
+  //})
+
+  app.listen(3400, () => {
+    console.log('Servidor rodando em http://localhost:3400');
+  });
