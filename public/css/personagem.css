@@ -1,56 +1,55 @@
  body {
-            margin: 0;
-            padding: 0;
-            font-family: monospace;
-            background-color: #000000;
-            color: #fff;
-        }
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background-color: #000000;
+    color: #fff;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .area-cabelos {
-            display: none;
-        }
+.area-cabelos {
+    display: none;
+}
 
-        .area-selecao-cabelos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
+.area-selecao-cabelos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-        .quadrado {
-            width: 10vw;
-            height: 50vh;
-            margin: 10px;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: opacity 0.3s ease-in-out;
-            background-color: #858585; /* Cor de fundo para melhor visibilidade */
-        }
+.quadrado {
+    width: 12vw;
+    height: 35vh;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    background-color: #858585;
+}
 
-        .quadrado img {
-            width: 10vw;
-            height: 50vh;
-            object-fit: cover;
-        }
+.quadrado img {
+    margin: 2vh;
+    width: 10vw;
+    height: 30vh;
+}
 
-        .bi-arrow-right-short {
-            font-size: 5rem;
-            margin-left: 60vw;
-            cursor: pointer;
-        }
+.bi-arrow-right-short {
+    font-size: 5rem;
+    margin-left: 60vw;
+    cursor: pointer;
+}
 
-        .corpo-personagem {
-            width: 300px;
-            height: 400px;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
+.corpo-personagem {
+    width: 10vw;
+    height: 30vh;
+    position: absolute;
+    top: 8vh;
+    left: 7vw;
         }
 
