@@ -17,7 +17,6 @@
         <div class="area-selecionada" id="areaSelecionada"></div>
         <!--rota 'personagem'--> 
         <div class="area-grande-personagens">
-            <h1>Escolha o corpo do personagem</h1>
             <i class="bi bi-arrow-right-short" id="botao-p" style="font-size: 5rem; color: white; margin-left: 65vw; cursor: pointer;"></i>
             <div class="area-selecao-personagem">
                 <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/pele 1.png')">
@@ -53,7 +52,6 @@
         <!-- rota 'cabelos' -->
         <div class="area-cabelos">
             <i class="bi bi-arrow-right-short" id="botao-c" style="font-size: 5rem; color: white; margin-left: 65vw; cursor: pointer;"></i>
-            <h1>Escolha o cabelo do personagem</h1>
             <div class="area-selecao-cabelos">
             <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/cabelo1m preto.png')">
                 <img src="./imagens/personagens/cabelo1m preto.png" alt="">
@@ -84,8 +82,7 @@
 
     <!-- rota 'blusas' -->
     <div class="area-blusas">
-        <i class="bi bi-arrow-right-short" id="botao-blusas" style="margin-left: 60vw" onclick="irParaRotaCalcas()"></i>
-        <h1>Escolha a blusa do personagem</h1>
+        <i class="bi bi-arrow-right-short" id="botao-blusas" style="margin-left: 65vw" onclick="irParaRotaCalcas()"></i>
         <div class="area-selecao-blusas">
         <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/blusac1.png')">
             <img src="./imagens/personagens/blusac1.png" alt="">
@@ -132,7 +129,6 @@
     <!-- rota 'calcas' -->
     <div class="area-calcas">
         <i class="bi bi-arrow-right-short" id="botao-ca" style="font-size: 5rem; color: rgb(255, 255, 255); margin-left: 65vw; cursor: pointer;"></i>
-        <h1>Escolha a calca do personagem</h1>
         <div class="area-selecao-calcas">
         <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/calca.png')">
             <img src="./imagens/personagens/calca.png" alt="">
@@ -169,9 +165,9 @@
 </div>
 
 <div class="salvar">
-        <i class="bi bi-arrow-right-short" id="botao" style="font-size: 5rem; color: rgb(255, 255, 255); margin-left: 80vw; cursor: pointer;"></i>
+        <i class="bi bi-arrow-right-short" id="botao" style="font-size: 5rem; color: rgb(255, 255, 255); margin-left: 85vw; cursor: pointer;"></i>
         <h1>Salve o seu personagem!</h1>
-        <button onclick="capturarComoImagem()">Baixar como Imagem</button>  
+        <button onclick="capturarComoImagem()" style="cursor: pointer;">Baixar como Imagem</button>  
 </div>
 
 

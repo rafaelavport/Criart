@@ -24,16 +24,13 @@ function Mudarestado(id, imagem) {
     }
     imagensSelecionadas.push(imagem);
 
-    // Atualizar a visualização da área-selecionada com as imagens escolhidas
     exibirImagensSelecionadas();
 }
 
-// Função para exibir as imagens selecionadas na área-selecionada
 function exibirImagensSelecionadas() {
     var areaSelecionada = document.getElementById('areaSelecionada');
     areaSelecionada.innerHTML = ''; // Limpar a área antes de exibir as novas imagens
 
-    // Exibir cada imagem selecionada na área-selecionada sobreposta
     imagensSelecionadas.forEach(function (imagemSrc, index) {
         var img = document.createElement('img');
         img.src = imagemSrc;
@@ -74,19 +71,21 @@ function irParaRotaSalvar() {
 }
 
 function capturarComoImagem() {
-    const areaSalvar = document.querySelector('.area-selecionada');
-    html2canvas(areaSalvar).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
-        downloadImagem(imgData, 'personagem.png');
-    });
+    const imagemSelecionada = document.querySelector('.area-selecionada img');
+
+    // Verifica se a imagem foi encontrada
+    if (imagemSelecionada) {
+        const link = document.createElement('a');
+        link.href = imagemSelecionada.src;
+        link.download = 'personagem.png'; // Define o nome do arquivo como 'personagem.png'
+
+        // Simula um clique no link para baixar a imagem
+        link.click();
+    } else {
+        console.error('Imagem não encontrada na área selecionada');
+    }
 }
 
-function downloadImagem(data, filename) {
-    const link = document.createElement('a');
-    link.href = data;
-    link.download = filename;
-    link.click();
-}
 
 document.getElementById('botao-p').addEventListener('click', irParaRotaCabelos);
 

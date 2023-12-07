@@ -11,7 +11,7 @@
 }
 
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -39,28 +39,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: 30vw;
+    margin-left: 13vw;
 }
 
 .area-selecao-cabelos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: 30vw;
+    margin-left: 13vw;
 }
 
 .area-selecao-blusas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: 30vw;
+    margin-left: 13vw;
 }
 
 .area-selecao-calcas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: 30vw;
+    margin-left: 13vw;
 }
 
 .quadrado {
@@ -93,15 +93,9 @@
     margin-left: 5vw;
 }
 
-.area-selecionada {
-    position: relative;
-    width: 300px;
-    margin-top: 200px;
-    height: 400px;
-    border: 2px solid #000;
-}
 .area-selecionada img{
-    margin: 50px;
+    padding-top: 35vh;
+    margin-left: 20vh;
 }
 
 .elemento-personagem {
