@@ -79,7 +79,7 @@ connection.connect((err) => {
       connection.query(checkUserQuery, [email, md5(senha)], (err, results) => {
         if (err) {
           console.error('Erro na consulta ao banco de dados: ' + err.message);
-          res.status(500).send('Erro interno no servidor');
+          res.status(500).send('Erro interno no banco de dados');
           return;
         }
   
@@ -92,7 +92,7 @@ connection.connect((err) => {
       });
     } catch (err) {
       console.error('Erro no login do usuário: ' + err.message);
-      res.status(500).send('Erro interno no servidor');
+      res.status(500).send('Erro no login');
     }
   });
 

@@ -11,10 +11,14 @@
 
 <body>
     <div class="container">
-        <!-- rota 'personagem' -->
-        <i class="bi bi-arrow-right-short" id="botao" style="font-size: 5rem; color: white; margin-left: 45vw; cursor: pointer;"></i>
+        <div class="area-corpo-personagem">
+            <img src="" alt="Corpo do personagem" id="corpoPersonagem">           
+        </div>
+        <div class="area-selecionada" id="areaSelecionada"></div>
+        <!--rota 'personagem'--> 
         <div class="area-grande-personagens">
             <h1>Escolha o corpo do personagem</h1>
+            <i class="bi bi-arrow-right-short" id="botao-p" style="font-size: 5rem; color: white; margin-left: 65vw; cursor: pointer;"></i>
             <div class="area-selecao-personagem">
                 <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/pele 1.png')">
                     <img src="./imagens/personagens/pele 1.png" alt="">
@@ -43,96 +47,136 @@
                 <div class="quadrado" id="div9" onclick="Mudarestado('div9', './imagens/personagens/pele verde.png')">
                     <img src="./imagens/personagens/pele verde.png" alt="">
                 </div>
-                <div class="quadrado" id="div10" >
-                </div>
-                <div class="quadrado" id="div11" >
-                </div>
-                <div class="quadrado" id="div12" >
-                </div>
             </div>
-            <i class="bi bi-arrow-right-short" id="botao" onclick="irParaRotaCabelos()"></i>
         </div>
 
         <!-- rota 'cabelos' -->
         <div class="area-cabelos">
+            <i class="bi bi-arrow-right-short" id="botao-c" style="font-size: 5rem; color: white; margin-left: 65vw; cursor: pointer;"></i>
             <h1>Escolha o cabelo do personagem</h1>
             <div class="area-selecao-cabelos">
-                <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/cabelo1m-preto.png')">
-                <img src="./imagens/personagens/cabelo1m-preto.png" alt="">
+            <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/cabelo1m preto.png')">
+                <img src="./imagens/personagens/cabelo1m preto.png" alt="">
             </div>
-            <div class="quadrado" id="div2" onclick="Mudarestado('div2', './imagens/personagens/cabelo1f preto.png')">
+            <div class="quadrado" id="div1" onclick="Mudarestado('div2', './imagens/personagens/cabelo1m verde.png')">
+                <img src="./imagens/personagens/cabelo1m verde.png" alt="">
+            </div>
+            <div class="quadrado" id="div1" onclick="Mudarestado('div3', './imagens/personagens/cabelo1m azul.png')">
+                <img src="./imagens/personagens/cabelo1m azul.png" alt="">
+            </div>
+            <div class="quadrado" id="div1" onclick="Mudarestado('div4', './imagens/personagens/cabelo1m ruivo.png')">
+                <img src="./imagens/personagens/cabelo1m ruivo.png" alt="">
+            </div>
+            <div class="quadrado" id="div2" onclick="Mudarestado('div5', './imagens/personagens/cabelo1f preto.png')">
                 <img src="./imagens/personagens/cabelo1f preto.png" alt="">
             </div>
-            <div class="quadrado" id="div4" onclick="Mudarestado('div4', './imagens/personagens/cabelo1f verde.png')">
+            <div class="quadrado" id="div4" onclick="Mudarestado('div6', './imagens/personagens/cabelo1f verde.png')">
                 <img src="./imagens/personagens/cabelo1f verde.png" alt="">
             </div>
-            <div class="quadrado" id="div5" onclick="Mudarestado('div5', './imagens/personagens/cabelo1f ruivo.png')">
+            <div class="quadrado" id="div5" onclick="Mudarestado('div7', './imagens/personagens/cabelo1f ruivo.png')">
                 <img src="./imagens/personagens/cabelo1f ruivo.png" alt="">
             </div>
-            <div class="quadrado" id="div6" onclick="Mudarestado('div6', './imagens/personagens/cabelo1f azul.png')">
+            <div class="quadrado" id="div6" onclick="Mudarestado('div8', './imagens/personagens/cabelo1f azul.png')">
                 <img src="./imagens/personagens/cabelo1f azul.png" alt="">
-            </div>
-            <div class="quadrado" id="div9"  onclick="Mudarestado('div9', './imagens/personagens/ropa.png')">
-                <img src="./imagens/personagens/ropa.png" alt="">
-            </div>
-            <div class="quadrado" id="div10"   onclick="Mudarestado('div9', './imagens/personagens/calca.png')">
-                <img src="./imagens/personagens/calca.png" alt="">
-            </div>
-            <div class="quadrado" id="div11" >
-            </div>
-            <div class="quadrado" id="div12" >
             </div>
         </div>
     </div>
 
     <!-- rota 'blusas' -->
     <div class="area-blusas">
-        <i class="bi bi-arrow-right-short" id="botao-blusas" onclick="irParaRotaCalcas()"></i>
+        <i class="bi bi-arrow-right-short" id="botao-blusas" style="margin-left: 60vw" onclick="irParaRotaCalcas()"></i>
         <h1>Escolha a blusa do personagem</h1>
         <div class="area-selecao-blusas">
-            <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/blusa1.png')">
-                <img src="./imagens/personagens/ropa" alt="">
-            </div>
-            <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/cabelo1m-preto.png')">
-            <img src="./imagens/personagens/cabelo1m-preto.png" alt="">
+        <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/blusac1.png')">
+            <img src="./imagens/personagens/blusac1.png" alt="">
         </div>
-        <div class="quadrado" id="div2" onclick="Mudarestado('div2', './imagens/personagens/cabelo1f-preto.png')">
-            <img src="./imagens/personagens/cabelo1f-preto.png" alt="">
+        <div class="quadrado" id="div2" onclick="Mudarestado('div2', './imagens/personagens/blusac2.png')">
+            <img src="./imagens/personagens/blusac2.png" alt="">
         </div>
-        <div class="quadrado" id="div3" onclick="Mudarestado('div3', './imagens/personagens/cabelo1f-roxo.png')">
-            <img src="./imagens/personagens/cabelo1f-roxo.png" alt="">
+        <div class="quadrado" id="div3" onclick="Mudarestado('div3', './imagens/personagens/blusac3.png')">
+            <img src="./imagens/personagens/blusac3.png" alt="">
         </div>
-        <div class="quadrado" id="div4" onclick="Mudarestado('div4', './imagens/personagens/cabelo1f verde.png')">
-            <img src="./imagens/personagens/cabelo1f verde.png" alt="">
+        <div class="quadrado" id="div4" onclick="Mudarestado('div4', './imagens/personagens/blusac4.png')">
+            <img src="./imagens/personagens/blusac4.png" alt="">
         </div>
-        <div class="quadrado" id="div5" onclick="Mudarestado('div5', './imagens/personagens/cabelo1f ruivo.png')">
-            <img src="./imagens/personagens/cabelo1f ruivo.png" alt="">
+        <div class="quadrado" id="div5" onclick="Mudarestado('div5', './imagens/personagens/blusac5.png')">
+            <img src="./imagens/personagens/blusac5.png" alt="">
         </div>
-        <div class="quadrado" id="div6" onclick="Mudarestado('div6', './imagens/personagens/cabelo1f azul.png')">
-            <img src="./imagens/personagens/cabelo1f azul.png" alt="">
+        <div class="quadrado" id="div6" onclick="Mudarestado('div6', './imagens/personagens/blusal1.png')">
+            <img src="./imagens/personagens/blusal1.png" alt="">
         </div>
-        <div class="quadrado" id="div7" onclick="Mudarestado('div7', './imagens/personagens/cabelo1f prata.png')">
-            <img src="./imagens/personagens/cabelo1f prata.png" alt="">
+        <div class="quadrado" id="div7" onclick="Mudarestado('div7', './imagens/personagens/blusal2.png')">
+            <img src="./imagens/personagens/blusal2.png" alt="">
         </div>
-        <div class="quadrado" id="div8" onclick="Mudarestado('div8', './imagens/personagens/cabelo1f lilas.png')">
-            <img src="./imagens/personagens/cabelo1f lilas.png" alt="">
+        <div class="quadrado" id="div8" onclick="Mudarestado('div8', './imagens/personagens/blusal3.png')">
+            <img src="./imagens/personagens/blusal3.png" alt="">
         </div>
-        <div class="quadrado" id="div9"  onclick="Mudarestado('div9', './imagens/personagens/ropa.png')">
-            <img src="./imagens/personagens/ropa.png" alt="">
+        <div class="quadrado" id="div9"  onclick="Mudarestado('div9', './imagens/personagens/blusal4.png')">
+            <img src="./imagens/personagens/blusal4.png" alt="">
         </div>
-        <div class="quadrado" id="div10"   onclick="Mudarestado('div9', './imagens/personagens/calca.png')">
+        <div class="quadrado" id="div10" onclick="Mudarestado('div10', './imagens/personagens/blusal5.png')">
+            <img src="./imagens/personagens/blusal5.png" alt="">
+        </div>
+        <div class="quadrado" id="div11"   onclick="Mudarestado('div11', './imagens/personagens/blusal6.png')">
+            <img src="./imagens/personagens/blusal6.png" alt="">
+        </div>
+        <div class="quadrado" id="div12"   onclick="Mudarestado('div12', './imagens/personagens/blusal7.png')">
+            <img src="./imagens/personagens/blusal7.png" alt="">
+        </div>
+        <div class="quadrado" id="div13"   onclick="Mudarestado('div13', './imagens/personagens/blusal8.png')">
+            <img src="./imagens/personagens/blusal8.png" alt="">
+        </div>
+        </div>
+    </div>
+
+    <!-- rota 'calcas' -->
+    <div class="area-calcas">
+        <i class="bi bi-arrow-right-short" id="botao-ca" style="font-size: 5rem; color: rgb(255, 255, 255); margin-left: 65vw; cursor: pointer;"></i>
+        <h1>Escolha a calca do personagem</h1>
+        <div class="area-selecao-calcas">
+        <div class="quadrado" id="div1" onclick="Mudarestado('div1', './imagens/personagens/calca.png')">
             <img src="./imagens/personagens/calca.png" alt="">
         </div>
-        <div class="quadrado" id="div11" >
+        <div class="quadrado" id="div2" onclick="Mudarestado('div2', './imagens/personagens/calca1.png')">
+            <img src="./imagens/personagens/calca1.png" alt="">
         </div>
-        <div class="quadrado" id="div12" >
+        <div class="quadrado" id="div3" onclick="Mudarestado('div3', './imagens/personagens/calca2.png')">
+            <img src="./imagens/personagens/calca2.png" alt="">
+        </div>
+        <div class="quadrado" id="div4" onclick="Mudarestado('div4', './imagens/personagens/calca3.png')">
+            <img src="./imagens/personagens/calca3.png" alt="">
+        </div>
+        <div class="quadrado" id="div5" onclick="Mudarestado('div5', './imagens/personagens/calca4.png')">
+            <img src="./imagens/personagens/calca4.png" alt="">
+        </div>
+        <div class="quadrado" id="div6" onclick="Mudarestado('div6', './imagens/personagens/calca5.png')">
+            <img src="./imagens/personagens/calca5.png" alt="">
+        </div>
+        <div class="quadrado" id="div7" onclick="Mudarestado('div7', './imagens/personagens/calca6.png')">
+            <img src="./imagens/personagens/calca6.png" alt="">
+        </div>
+        <div class="quadrado" id="div8" onclick="Mudarestado('div8', './imagens/personagens/calca7.png')">
+            <img src="./imagens/personagens/calca7.png" alt="">
+        </div>
+        <div class="quadrado" id="div9"  onclick="Mudarestado('div9', './imagens/personagens/calca8.png')">
+            <img src="./imagens/personagens/calca8.png" alt="">
+        </div>
+        <div class="quadrado" id="div10" onclick="Mudarestado('div10', './imagens/personagens/calca9.png')">
+            <img src="./imagens/personagens/calca9.png" alt="">
+        </div>
         </div>
     </div>
 </div>
 
-    </div>
+<div class="salvar">
+        <i class="bi bi-arrow-right-short" id="botao" style="font-size: 5rem; color: rgb(255, 255, 255); margin-left: 80vw; cursor: pointer;"></i>
+        <h1>Salve o seu personagem!</h1>
+        <button onclick="capturarComoImagem()">Baixar como Imagem</button>  
+</div>
+
 
     <script src="./js/personagens.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
 </body>
 
 </html>

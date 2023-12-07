@@ -1,9 +1,11 @@
 body {
-    background-image: url(../imagens/fundohome.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #101010;
     font-family: monospace;
     margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .tela-principal-logo{
@@ -20,7 +22,7 @@ h1{
 .boxes{
     height: 200vh;
     position: absolute;
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
 .box1 {
@@ -52,7 +54,7 @@ h1{
 
 .b2{
     margin-top: 30px;
-    margin-left: 51.25vw;
+    margin-left: 53vw;
     height: 35vh;
     width: 47vw;
     border: solid 4px white;
@@ -87,7 +89,7 @@ h1{
 
 .b4{
     margin-top: 30px;
-    margin-left: 51.25vw;
+    margin-left: 53vw;
     height: 35vh;
     width: 47vw;
     border: solid 4px white;
